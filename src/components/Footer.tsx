@@ -12,8 +12,8 @@ export default function Footer() {
             <span>Handcrafted Haven</span>
           </Link>
           <p className="site-footer__summary">
-            A Week 02 foundation for an accessible marketplace that celebrates
-            handmade work and creative communities.
+            An accessible marketplace concept that celebrates handmade work,
+            artisan stories, and creative communities.
           </p>
         </div>
 
@@ -33,7 +33,7 @@ export default function Footer() {
       </div>
       <div className="site-footer__bottom content-width">
         <p>Handcrafted Haven · WDD 430 Team 05</p>
-        <p>Initial visual direction for educational use.</p>
+        <p>Week 03 project build for educational use.</p>
       </div>
     </footer>
   );

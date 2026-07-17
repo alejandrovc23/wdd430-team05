@@ -22,8 +22,8 @@ export default function Hero() {
             </Link>
           </div>
           <p className="hero__note">
-            A Week 02 visual foundation built around accessibility, community,
-            and sustainable craft.
+            A responsive Week 03 landing page built around accessibility,
+            community, and sustainable craft.
           </p>
         </div>
 

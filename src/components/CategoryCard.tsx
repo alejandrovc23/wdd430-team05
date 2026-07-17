@@ -1,7 +1,12 @@
 import Image from "next/image";
 import Link from "next/link";
+import type { Category } from "../types/catalog";
 
-export default function CategoryCard({ category }) {
+interface CategoryCardProps {
+  category: Category;
+}
+
+export default function CategoryCard({ category }: CategoryCardProps) {
   return (
     <li className="category-card">
       <article>
