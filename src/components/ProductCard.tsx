@@ -18,26 +18,47 @@ export default function ProductCard({ product }: ProductCardProps) {
             width={800}
             height={600}
           />
-          <span className="product-card__category">{product.category}</span>
+
+          <span className="product-card__category">
+            {product.category}
+          </span>
         </div>
+
         <div className="product-card__content">
           <h3>{product.name}</h3>
-          <p className="product-card__artisan">By {product.artisan}</p>
+
+          <p className="product-card__artisan">
+            By {product.artisan}
+          </p>
+
           <div className="product-card__details">
-            <p className="product-card__price">{product.price}</p>
+            <p className="product-card__price">
+              {product.price}
+            </p>
+
             <p className="product-card__rating">
               <span aria-hidden="true">★</span>
-              <span className="sr-only">Sample rating: </span>
+
+              <span className="sr-only">
+                Customer rating:
+              </span>{" "}
+
               {product.rating} out of 5
+
               <span className="product-card__reviews">
-                ({product.reviewCount} sample reviews)
+                ({product.reviewCount} reviews)
               </span>
             </p>
           </div>
-          <Link className="text-link" href={product.href}>
-            See the artisan-story concept
+
+          <Link
+            className="text-link"
+            href={product.href}
+            aria-label={`View details for ${product.name}`}
+          >
+            View product details
             <span className="sr-only">
-              {" "}from the {product.name} sample card
+              {" "}for {product.name}
             </span>
             <span aria-hidden="true"> →</span>
           </Link>

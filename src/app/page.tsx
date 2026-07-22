@@ -18,17 +18,25 @@ export default function Home() {
         <div className="content-width">
           <div className="section-heading">
             <div>
-              <p className="eyebrow">Explore by craft</p>
-              <h2 id="categories-title">Featured categories</h2>
+              <p className="eyebrow">Explore collections</p>
+
+              <h2 id="categories-title">
+                Shop by category
+              </h2>
             </div>
+
             <p>
-              Discover the textures, forms, and traditions that make handmade
-              objects feel personal.
+              Browse handcrafted products organized by craft type,
+              materials, and creative tradition.
             </p>
           </div>
+
           <ul className="card-grid category-grid" role="list">
             {categories.map((category) => (
-              <CategoryCard key={category.id} category={category} />
+              <CategoryCard
+                key={category.id}
+                category={category}
+              />
             ))}
           </ul>
         </div>
@@ -42,17 +50,25 @@ export default function Home() {
         <div className="content-width">
           <div className="section-heading">
             <div>
-              <p className="eyebrow">A glimpse of the collection</p>
-              <h2 id="products-title">Featured handmade pieces</h2>
+              <p className="eyebrow">Handpicked creations</p>
+
+              <h2 id="products-title">
+                Featured handmade products
+              </h2>
             </div>
+
             <p>
-              Static sample content demonstrates the product-card direction for
-              future catalog development.
+              Discover unique items created by independent artisans,
+              each with its own story, materials, and craftsmanship.
             </p>
           </div>
+
           <ul className="card-grid product-grid" role="list">
             {products.map((product) => (
-              <ProductCard key={product.id} product={product} />
+              <ProductCard
+                key={product.id}
+                product={product}
+              />
             ))}
           </ul>
         </div>

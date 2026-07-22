@@ -13,27 +13,41 @@ export default function ArtisanSection() {
           <Image
             className="artisan-section__image"
             src="/images/artisan-workshop.svg"
-            alt="Illustration of a maker shaping a ceramic piece in a warm workshop"
+            alt="Artisan creating handmade products in a workshop"
             width={800}
             height={600}
           />
         </div>
 
         <div className="artisan-section__content">
-          <p className="eyebrow">The person behind the piece</p>
-          <h2 id="artisan-title">Every object begins with a maker.</h2>
+          <p className="eyebrow">Meet the creators</p>
+
+          <h2 id="artisan-title">
+            Every handcrafted piece has a story behind it.
+          </h2>
+
           <p>
-            Our semester vision puts artisan biographies and creative processes
-            beside the products they shape, helping customers understand the
-            materials, traditions, and care behind each item.
+            Handcrafted Haven gives artisans a place to share their creative
+            journey, showcase their skills, and connect with customers who
+            appreciate unique handmade products.
           </p>
+
           <ul className="artisan-values" role="list">
-            <li>Human stories presented with clarity and respect</li>
-            <li>Thoughtful details about materials and process</li>
-            <li>Accessible discovery across devices and abilities</li>
+            <li>
+              Artisan profiles that highlight each maker&apos;s story and
+              craftsmanship
+            </li>
+            <li>
+              Product details that explain materials, techniques, and creative
+              processes
+            </li>
+            <li>
+              A welcoming marketplace designed for customers and creators
+            </li>
           </ul>
-          <Link className="button button--light" href="/design-system#brand-direction">
-            See the brand direction
+
+          <Link className="button button--light" href="/sellers">
+            Explore our artisans
           </Link>
         </div>
       </div>

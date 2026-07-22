@@ -2,7 +2,7 @@ import "./globals.css";
 import type { Metadata, Viewport } from "next";
 import type { ReactNode } from "react";
 import Footer from "../components/Footer";
-import Header from "../components/Header";
+import Navbar from "../components/Navbar";
 
 export const metadata: Metadata = {
   title: {
@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     template: "%s | Handcrafted Haven",
   },
   description:
-    "An accessible marketplace concept celebrating artisans, handmade goods, and thoughtful product discovery.",
+    "Handcrafted Haven is an online marketplace where customers discover unique handmade products from talented artisans and independent creators.",
 };
 
 export const viewport: Viewport = {
@@ -28,8 +28,11 @@ export default function RootLayout({ children }: RootLayoutProps) {
         <a className="skip-link" href="#main-content">
           Skip to main content
         </a>
-        <Header />
+
+        <Navbar />
+
         {children}
+
         <Footer />
       </body>
     </html>

@@ -7,23 +7,30 @@ export default function Hero() {
       <div className="hero__inner content-width">
         <div className="hero__content">
           <p className="eyebrow">Made by hand. Chosen with heart.</p>
-          <h1 id="hero-title">Find meaning in the things you bring home.</h1>
+
+          <h1 id="hero-title">
+            Discover unique handcrafted treasures from talented artisans.
+          </h1>
+
           <p className="hero__lede">
-            Handcrafted Haven is a welcoming marketplace concept where thoughtful
-            objects, skilled makers, and the stories behind each piece come
-            together.
+            Handcrafted Haven connects customers with creative makers who
+            transform passion, skill, and sustainable materials into meaningful
+            handmade products.
           </p>
+
           <div className="button-group">
-            <Link className="button button--primary" href="#featured-products">
-              Browse featured pieces
+            <Link className="button button--primary" href="/products">
+              Browse products
             </Link>
-            <Link className="button button--secondary" href="/design-system">
-              Explore our design system
+
+            <Link className="button button--secondary" href="/sellers">
+              Meet our artisans
             </Link>
           </div>
+
           <p className="hero__note">
-            A responsive Week 03 landing page built around accessibility,
-            community, and sustainable craft.
+            Support independent creators while discovering carefully crafted
+            items made with purpose and creativity.
           </p>
         </div>
 
@@ -32,15 +39,21 @@ export default function Hero() {
             <Image
               className="hero__image"
               src="/images/artisan-workshop.svg"
-              alt="Illustration of an artisan working at a sunlit craft table"
+              alt="Artisan creating handmade products at a craft table"
               width={800}
               height={600}
               priority
             />
           </div>
+
           <div className="hero__caption">
-            <span className="hero__caption-kicker">Craft with a story</span>
-            <span>Designed to celebrate patient hands and enduring materials.</span>
+            <span className="hero__caption-kicker">
+              Every piece tells a story
+            </span>
+            <span>
+              Celebrating skilled makers, sustainable practices, and meaningful
+              craftsmanship.
+            </span>
           </div>
         </div>
       </div>

@@ -5,27 +5,27 @@ export const categories: Category[] = [
     id: "ceramics",
     name: "Ceramics",
     description:
-      "Wheel-thrown forms and hand-built pieces shaped for everyday rituals.",
+      "Handcrafted pottery and ceramic pieces created by artisans for everyday living and meaningful spaces.",
     image: "/images/category-ceramics.svg",
     imageAlt:
-      "Illustration of handcrafted ceramic vessels surrounded by simple leaves",
+      "Handcrafted ceramic vessels displayed with natural decorative elements",
   },
   {
-    id: "textiles",
-    name: "Woven Textiles",
+    id: "woven-goods",
+    name: "Woven Goods",
     description:
-      "Thoughtful textures created with traditional weaving and natural fibers.",
+      "Beautiful handmade baskets, textiles, and fiber creations crafted using traditional techniques.",
     image: "/images/category-textiles.svg",
     imageAlt:
-      "Illustration of a woven textile with geometric patterns and loose fringe",
+      "Handwoven textile with natural fibers and geometric patterns",
   },
   {
     id: "jewelry",
-    name: "Artisan Jewelry",
+    name: "Jewelry",
     description:
-      "Small-batch adornments designed to carry a maker's distinctive touch.",
+      "Unique artisan jewelry pieces made with carefully selected materials and personal creative expression.",
     image: "/images/category-jewelry.svg",
     imageAlt:
-      "Illustration of a handcrafted pendant necklace on a warm cream surface",
+      "Handcrafted pendant necklace displayed on a warm surface",
   },
 ];

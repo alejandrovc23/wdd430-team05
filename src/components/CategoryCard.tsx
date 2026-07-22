@@ -19,11 +19,18 @@ export default function CategoryCard({ category }: CategoryCardProps) {
             height={600}
           />
         </div>
+
         <div className="category-card__content">
           <h3>{category.name}</h3>
+
           <p>{category.description}</p>
-          <Link className="text-link" href="#featured-products">
-            View featured pieces
+
+          <Link
+            className="text-link"
+            href={`/products?category=${encodeURIComponent(category.name)}`}
+            aria-label={`Browse ${category.name} products`}
+          >
+            Browse products
             <span className="sr-only"> in {category.name}</span>
             <span aria-hidden="true"> →</span>
           </Link>
