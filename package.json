@@ -9,15 +9,9 @@
     "lint": "eslint ."
   },
   "dependencies": {
-<<<<<<< HEAD
-    "next": "^15.5.0",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
-=======
     "next": "^16.2.10",
     "react": "^19.2.7",
     "react-dom": "^19.2.7"
->>>>>>> 31d32024584e649839a7e79b37fbfee9d5d29438
   },
   "devDependencies": {
     "@types/node": "^20.19.43",
