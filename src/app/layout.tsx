@@ -20,10 +20,9 @@ export const viewport: Viewport = {
 interface RootLayoutProps {
   children: ReactNode;
 }
-
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
-    <html lang="en">
+    <html lang="en" data-scroll-behavior="smooth">
       <body>
         <a className="skip-link" href="#main-content">
           Skip to main content
