@@ -1,4 +1,6 @@
-export const products = [
+import type { Product } from "../types/catalog";
+
+export const products: Product[] = [
   {
     id: "ember-mug",
     name: "Ember Glaze Mug",

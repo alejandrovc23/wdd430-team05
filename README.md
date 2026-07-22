@@ -8,12 +8,14 @@ Handcrafted Haven is a semester project for WDD 430, developed by Team 05. The p
 
 The platform is intended to make handmade products easier to discover while giving artisans space to share their work, collections, and stories. The project emphasizes creative communities, sustainable consumption, clear product information, and an inclusive shopping experience.
 
-## Week 02 Status
+## Week 03 Status
 
-Week 02 establishes the project foundation rather than a complete store. The current work includes:
+Week 03 advances the project foundation rather than delivering a complete store. The current work includes:
 
-- An initial Next.js application foundation
-- A responsive homepage and design-system demonstration
+- A Next.js 16 application using TypeScript, ESLint, the App Router, and a `src/` directory
+- A responsive landing page with a hero, featured categories, featured products, and an artisan-story section
+- Reusable, typed React components and static demonstration data
+- A responsive design-system demonstration
 - Project scope, design, submission, and evidence planning documents
 - A documented collaboration workflow
 - A twelve-item work backlog for future development
@@ -43,7 +45,7 @@ The meeting time can change only after agreement from all team members.
 
 ### Currently Configured
 
-- JavaScript
+- TypeScript
 - Next.js with the App Router
 - React
 - CSS
@@ -80,9 +82,10 @@ Open [http://localhost:3000](http://localhost:3000) for the homepage or [http://
 ## Project Structure
 
 ```text
-app/                 Next.js routes, shared layout, and global styles
-components/          Reusable interface components
-data/                Static demonstration data
+src/app/             Next.js routes, shared layout, and global styles
+src/components/      Reusable, typed interface components
+src/data/            Typed static demonstration data
+src/types/           Shared TypeScript interfaces
 docs/                Project planning and Week 02 evidence guidance
 public/images/       Local demonstration artwork
 scripts/             Safe GitHub Project and collaborator helpers

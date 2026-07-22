@@ -1,8 +1,10 @@
 import Link from "next/link";
+import type { Metadata } from "next";
+import type { CSSProperties } from "react";
 import ProductCard from "../../components/ProductCard";
 import { products } from "../../data/products";
 
-export const metadata = {
+export const metadata: Metadata = {
   title: "Design System",
   description:
     "The Week 02 color, typography, component, layout, and accessibility direction for Handcrafted Haven.",
@@ -34,6 +36,8 @@ const radiusTokens = [
   { name: "Large", value: "1.5rem" },
   { name: "Pill", value: "999px" },
 ];
+
+type CustomProperties = CSSProperties & Record<`--${string}`, string>;
 
 export default function DesignSystemPage() {
   return (
@@ -88,7 +92,7 @@ export default function DesignSystemPage() {
               <li className="color-swatch" key={color.name}>
                 <div
                   className="color-swatch__preview"
-                  style={{ "--swatch-color": color.value }}
+                  style={{ "--swatch-color": color.value } as CustomProperties}
                   aria-hidden="true"
                 />
                 <div className="color-swatch__details">
@@ -244,7 +248,7 @@ export default function DesignSystemPage() {
                     <span className="token-name">{token.name}</span>
                     <span
                       className="spacing-bar"
-                      style={{ "--token-size": token.value }}
+                      style={{ "--token-size": token.value } as CustomProperties}
                       aria-hidden="true"
                     />
                     <code>{token.value}</code>
@@ -259,7 +263,7 @@ export default function DesignSystemPage() {
                   <li key={token.name}>
                     <span
                       className="radius-preview"
-                      style={{ "--token-radius": token.value }}
+                      style={{ "--token-radius": token.value } as CustomProperties}
                       aria-hidden="true"
                     />
                     <span>
