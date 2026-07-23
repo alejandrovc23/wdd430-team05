@@ -1,6 +1,8 @@
 import Image from "next/image";
 import { notFound } from "next/navigation";
 import { products } from "../../../data/products";
+import { reviews } from "../../../data/reviews";
+import ReviewForm from "../../../components/ReviewForm";
 
 interface ProductPageProps {
   params: Promise<{
@@ -26,6 +28,10 @@ export default async function ProductPage({
   if (!product) {
     notFound();
   }
+
+  const productReviews = reviews.filter(
+    (review) => review.productId === product.id
+  );
 
   return (
     <main id="main-content" tabIndex={-1}>
@@ -94,10 +100,39 @@ export default async function ProductPage({
             Customer reviews
           </h2>
 
-          <p>
-            Reviews and ratings from customers will
-            appear here.
-          </p>
+          {productReviews.length > 0 ? (
+            <ul className="card-grid" role="list">
+              {productReviews.map((review) => (
+                <li key={review.id}>
+                  <article className="artisan-card">
+                    <h3>
+                      {review.customerName}
+                    </h3>
+
+                    <p
+                      aria-label={`Rated ${review.rating} out of 5 stars`}
+                    >
+                      {"★".repeat(review.rating)}
+                    </p>
+
+                    <p>
+                      {review.comment}
+                    </p>
+
+                    <small>
+                      {review.createdAt}
+                    </small>
+                  </article>
+                </li>
+              ))}
+            </ul>
+          ) : (
+            <p>
+              No reviews yet. Be the first to share your experience.
+            </p>
+          )}
+
+          <ReviewForm productId={product.id} />
         </div>
       </section>
     </main>

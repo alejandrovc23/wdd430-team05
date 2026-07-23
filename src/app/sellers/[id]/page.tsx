@@ -1,6 +1,7 @@
-import Image from "next/image";
+import ProductGrid from "../../../components/ProductGrid";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import SellerProfile from "../../../components/SellerProfile";
 import { sellers } from "../../../data/sellers";
 import { products } from "../../../data/products";
 
@@ -40,47 +41,7 @@ export default async function SellerPage({
         aria-labelledby="seller-title"
       >
         <div className="content-width">
-          <div className="product-detail">
-            <div className="product-detail__image">
-              <Image
-                src={seller.image}
-                alt={seller.imageAlt}
-                width={800}
-                height={600}
-                priority
-              />
-            </div>
-
-            <div className="product-detail__content">
-              <p className="eyebrow">
-                Artisan Profile
-              </p>
-
-              <h1 id="seller-title">
-                {seller.businessName}
-              </h1>
-
-              {seller.specialty && (
-                <p>
-                  <strong>Specialty:</strong>{" "}
-                  {seller.specialty}
-                </p>
-              )}
-
-              <h2>About the Artisan</h2>
-
-              <p>{seller.story}</p>
-
-              {seller.contact && (
-                <p>
-                  <strong>Contact:</strong>{" "}
-                  <a href={seller.contact}>
-                    {seller.contact}
-                  </a>
-                </p>
-              )}
-            </div>
-          </div>
+          <SellerProfile seller={seller} />
         </div>
       </section>
 
@@ -93,30 +54,10 @@ export default async function SellerPage({
             Handmade Collection
           </h2>
 
-          {sellerProducts.length > 0 ? (
-            <ul className="card-grid product-grid">
-              {sellerProducts.map((product) => (
-                <li key={product.id}>
-                  <article className="product-card">
-                    <h3>
-                      <Link href={product.href}>
-                        {product.name}
-                      </Link>
-                    </h3>
-
-                    {product.description && (
-                      <p>{product.description}</p>
-                    )}
-                  </article>
-                </li>
-              ))}
-            </ul>
-          ) : (
-            <p>
-              This artisan&apos;s products will be
-              available soon.
-            </p>
-          )}
+          <ProductGrid
+            products={sellerProducts}
+            emptyMessage="This artisan's products will be available soon."
+          />
         </div>
       </section>
     </main>

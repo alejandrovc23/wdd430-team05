@@ -33,7 +33,6 @@ export default function Footer() {
       </div>
       <div className="site-footer__bottom content-width">
         <p>Handcrafted Haven · WDD 430 Team 05</p>
-        <p>Week 03 project build for educational use.</p>
       </div>
     </footer>
   );

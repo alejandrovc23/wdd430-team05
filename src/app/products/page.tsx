@@ -1,4 +1,4 @@
-import ProductCard from "../../components/ProductCard";
+import ProductFilter from "../../components/ProductFilter";
 import { products } from "../../data/products";
 
 export const metadata = {
@@ -10,11 +10,16 @@ export const metadata = {
 export default function ProductsPage() {
   return (
     <main id="main-content" tabIndex={-1}>
-      <section className="section" aria-labelledby="products-title">
+      <section
+        className="section"
+        aria-labelledby="products-title"
+      >
         <div className="content-width">
           <div className="section-heading">
             <div>
-              <p className="eyebrow">Our collection</p>
+              <p className="eyebrow">
+                Our collection
+              </p>
 
               <h1 id="products-title">
                 Handmade products
@@ -22,20 +27,14 @@ export default function ProductsPage() {
             </div>
 
             <p>
-              Explore unique handcrafted pieces created by independent
-              artisans. Each product represents creativity, skill, and
+              Explore unique handcrafted pieces created
+              by independent artisans. Each product
+              represents creativity, skill, and
               meaningful craftsmanship.
             </p>
           </div>
 
-          <ul className="card-grid product-grid" role="list">
-            {products.map((product) => (
-              <ProductCard
-                key={product.id}
-                product={product}
-              />
-            ))}
-          </ul>
+          <ProductFilter products={products} />
         </div>
       </section>
     </main>
