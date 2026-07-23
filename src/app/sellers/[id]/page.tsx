@@ -30,8 +30,7 @@ export default async function SellerPage({
   }
 
   const sellerProducts = products.filter(
-    (product) =>
-      product.artisanId === seller.id
+    (product) => product.artisanId === seller.id
   );
 
   return (
@@ -48,21 +47,38 @@ export default async function SellerPage({
                 alt={seller.imageAlt}
                 width={800}
                 height={600}
+                priority
               />
             </div>
 
             <div className="product-detail__content">
               <p className="eyebrow">
-                Artisan profile
+                Artisan Profile
               </p>
 
               <h1 id="seller-title">
                 {seller.businessName}
               </h1>
 
-              <p>
-                {seller.story}
-              </p>
+              {seller.specialty && (
+                <p>
+                  <strong>Specialty:</strong>{" "}
+                  {seller.specialty}
+                </p>
+              )}
+
+              <h2>About the Artisan</h2>
+
+              <p>{seller.story}</p>
+
+              {seller.contact && (
+                <p>
+                  <strong>Contact:</strong>{" "}
+                  <a href={seller.contact}>
+                    {seller.contact}
+                  </a>
+                </p>
+              )}
             </div>
           </div>
         </div>
@@ -74,16 +90,24 @@ export default async function SellerPage({
       >
         <div className="content-width">
           <h2 id="collection-title">
-            Handmade collection
+            Handmade Collection
           </h2>
 
           {sellerProducts.length > 0 ? (
             <ul className="card-grid product-grid">
               {sellerProducts.map((product) => (
                 <li key={product.id}>
-                  <Link href={product.href}>
-                    {product.name}
-                  </Link>
+                  <article className="product-card">
+                    <h3>
+                      <Link href={product.href}>
+                        {product.name}
+                      </Link>
+                    </h3>
+
+                    {product.description && (
+                      <p>{product.description}</p>
+                    )}
+                  </article>
                 </li>
               ))}
             </ul>

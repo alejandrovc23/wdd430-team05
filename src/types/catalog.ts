@@ -35,6 +35,8 @@ export interface Seller {
   name: string;
   businessName: string;
   story: string;
+  specialty: string;
+  contact: string;
   image: string;
   imageAlt: string;
 }
